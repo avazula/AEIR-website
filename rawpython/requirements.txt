@@ -1,0 +1,17 @@
+numpy
+scipy
+tensorflow
+tensorflow-gpu
+keras
+ipython
+six
+protobuf
+wheel
+matplotlib
+jupyter
+opencv-python
+Pillow
+contextlib2
+Cython
+lxml
+imageio

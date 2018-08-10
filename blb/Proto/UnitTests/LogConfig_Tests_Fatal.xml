@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+ 
+ 
+  <!-- Output specific logger start/stop to log file and console -->
+  <!--                                                           -->
+  <!-- Do not change except the output filename                  -->
+  <!--===========================================================-->
+  <appender name="appxConsoleStartStopAppender" class="org.apache.log4j.ConsoleAppender">    
+    <param name="Target" value="System.out"/>
+    <layout class="org.apache.log4j.PatternLayout">
+    	<param name="ConversionPattern" value="%m%n"/>
+    </layout>
+  </appender>
+ 
+  <appender name="appxStartAppender" class="org.apache.log4j.FileAppender">
+    <param name="file" value="./logs/AtsComTests.log" />
+    <param name="append" value="true" />
+    <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="%m%n" />
+    </layout>
+  </appender>
+
+  <appender name="appxStopAppender" class="org.apache.log4j.FileAppender">
+    <param name="file" value="./logs/AtsComTests.log" />
+    <param name="append" value="true" />
+    <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="%m%n" />
+    </layout>
+  </appender>
+
+  <logger name="startLogger" additivity="false">
+        <priority value ="info" />
+        <appender-ref ref="appxConsoleStartStopAppender"/>
+        <appender-ref ref="appxStartAppender"/>
+  </logger>
+  
+  <logger name="stopLogger" additivity="false">
+        <priority value ="info" />
+        <appender-ref ref="appxConsoleStartStopAppender"/>
+        <appender-ref ref="appxStopAppender"/>
+  </logger>
+
+
+ 
+ 
+  <!-- Output the log message to system console.                 -->
+  <!--                                                           -->
+  <!-- See: http://logging.apache.org/log4cxx/apidocs/index.html -->
+  <!-- class PatternLayout  for pattern layout customization     -->
+  <!--===========================================================-->
+  <appender name="appxConsoleAppender" class="org.apache.log4j.ConsoleAppender">    
+    <param name="Target" value="System.out"/>
+    <param name="Encoding" value="ISO-8859-1" />
+    <layout class="org.apache.log4j.PatternLayout">
+    	<param name="ConversionPattern" value="%d %-5p (%c{1}.%F) %m%n"/>
+    </layout>
+    <filter class="org.apache.log4j.filter.LevelRangeFilter">
+            <param name="LevelMin" value="ERROR"/>
+            <param name="LevelMax" value="FATAL"/>
+    </filter>
+  </appender>
+
+ 
+
+  <!-- Output the log message to log file                        -->
+  <!--                                                           -->
+  <!-- Do not change except the output filename                  -->
+  <!-- See: http://logging.apache.org/log4cxx/apidocs/index.html -->
+  <!-- class PatternLayout  for pattern layout customization     -->
+  <!--===========================================================-->
+  <appender name="appxNormalAppender" class="org.apache.log4j.RollingFileAppender">
+    <param name="file" value="./logs/AtsComTests.log" />
+    <param name="append" value="true" />
+    <param name="Encoding" value="ISO-8859-1" />
+ 
+    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+        <param name="FileNamePattern" value="TimeBasedLog.%d{yyyy-MM-dd}.log"/>
+        <param name="activeFileName" value="./logs/AtsComTests.log"/>
+    </rollingPolicy>
+ 
+    <layout class="org.apache.log4j.PatternLayout">
+    	<param name="ConversionPattern" value="%d %-5p [%t] (%c{1}.%F(%L)) %m%n" />
+    </layout>
+  </appender>
+
+
+
+  <!-- Specify the appender and level of the root logger         -->
+  <!--                                                           -->
+  <!-- Change priority value to debug, info, error or fatal      -->
+  <!-- Comment the appender line to disable the output           -->
+  <!--===========================================================-->
+  <root>
+        <priority value="fatal" />
+        <appender-ref ref="appxNormalAppender"/>
+        <appender-ref ref="appxConsoleAppender"/>
+  </root>
+
+
+
+ </log4j:configuration>

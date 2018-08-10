@@ -1,0 +1,11 @@
+numpy
+scipy
+tensorflow
+tensorflow-gpu
+keras
+ipython
+jupyter
+six
+protobuf==3.6.0
+wheel
+graphviz
