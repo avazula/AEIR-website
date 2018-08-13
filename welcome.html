@@ -43,19 +43,17 @@
     font-family: roboto;
     font-size: 18px;
   }
-  /* Make website tabs align right */
+
+  /* Align logo to the top left */
+  li:first-child {
+    float: left;
+  }
+
+  /* Make other tabs align top right*/
   li {
     float:right;
     padding: 5px 5px;
   }
-
-  /* #logo {
-  height: 75px;
-  vertical-align:middle;
-  position:absolute;
-  left: 30px;
-  top: 30px;
-  } */
 
   a {
     display: block;
@@ -101,62 +99,80 @@
     }
   }
 
-#title_vivez{
-  font-size: 70px;
-  font-family:roboto-bold;
-  text-transform:uppercase;
-  text-align:center;
-  color:white;
-}
+  #title_vivez{
+    font-size: 70px;
+    font-family:roboto-bold;
+    text-transform:uppercase;
+    text-align:center;
+    color:white;
+  }
 
-#title_insa{
-  font-size: 55px;
-  font-family:roboto;
-  text-transform:uppercase;
-  text-align:center;
-  color:white;
-}
+  #title_insa{
+    font-size: 55px;
+    font-family:roboto;
+    text-transform:uppercase;
+    text-align:center;
+    color:white;
+  }
 
-#resume {
-  font-size: 20px;
-  font-family:roboto;
-  text-transform:uppercase;
-  text-align:center;
-  color:white;
-}
+  #resume {
+    font-size: 20px;
+    font-family:roboto;
+    text-transform:uppercase;
+    text-align:center;
+    color:white;
+  }
+
+  #logo {
+    position:relative;
+  }
+
+  #logo img {
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
   </style>
 </head>
 
 <body>
 
-  <!-- <a href="www.aeir.insa-rennes.fr">
-  <img id="logo" src="AEIR_logoblanc01.svg" alt="AEIR logo">
-</a> -->
-
 <div class="parallax"> </div>
 
 <div class="parallax_text">
+<!-- Welcoming text, centered on the parallax image -->
   <h3 id="title_vivez"> Vivez l'associatif </h3>
   <p id="title_insa"> - à l'INSA Rennes - </p>
   <p id="resume"> AVEC PRÈS DE 1000 ADHÉRENTS ET PLUS DE 40 CLUBS, <br>
-L’AEIR EST UN ACTEUR MAJEUR DE LA VIE ASSOCIATIVE RENNAISE. </p>
-</div>
+    L’AEIR EST UN ACTEUR MAJEUR DE LA VIE ASSOCIATIVE RENNAISE. </p>
+  </div>
 
-<ul>
-  <li> <a href="#">Contact </a> </li>
-  <li> <a href="#">Adhésion </a> </li>
-  <li> <a href="#">Événements</a> </li>
-  <li> <a href="#">Partenaires</a> </li>
-  <li> <a href="#">Clubs</a> </li>
-  <li> <a href="#">Bureau </a> </li>
-  <li> <a href="welcome.html">Accueil</a> </li>
-</ul>
+<!-- Navbar -->
+  <ul>
+<!-- The logo is the only tab to the top left of the page -->
+    <li> <div id="logo">
+      <a href="http://aeir.insa-rennes.fr">
+        <img src="AEIR_logoblanc01.svg" alt="Logo AEIR">
+      </a>
+    </div> </li>
+<!-- All other tabs are aligned to the top right -->
+    <li> <a href="#">Contact </a> </li>
+    <li> <a href="#">Adhésion </a> </li>
+    <li> <a href="#">Événements</a> </li>
+    <li> <a href="#">Partenaires</a> </li>
+    <li> <a href="#">Clubs</a> </li>
+    <li> <a href="#">Bureau </a> </li>
+    <li> <a href="welcome.html">Accueil</a> </li>
+    <!-- <li>  Amicale des élèves <br> de l'INSA Rennes </li> -->
+  </ul>
 
-<div style="height:1000px;background-color:black;font-size:36px">
-  Scroll Up and Down this page to see the parallax scrolling effect.
-  This div is just here to enable scrolling.
-  Tip: Try to remove the background-attachment property to remove the scrolling effect.
-</div>
+<!-- Junk div to simulate parallax effect -->
+  <div style="height:1000px;background-color:black;font-size:36px">
+    Scroll Up and Down this page to see the parallax scrolling effect.
+    This div is just here to enable scrolling.
+    Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  </div>
 
 </body>
 </html>
