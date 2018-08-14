@@ -5,32 +5,59 @@
   <!-- Ensure proper rendering and zoom touching -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Resources for Bootstrap stuff -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <title>Amicale des Élèves de l'INSA Rennes</title>
 
   <style media="screen">
+
+  body, html {
+    height: 100%;
+    background:black;
+  }
+  /* Domou arigato Mister Roboto! */
+  @font-face {
+    font-family: roboto;
+    src: url(fonts/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: roboto-bold;
+    src: url(fonts/Roboto-Bold.ttf);
+  }
 
   ul {
     /* Remove the default HTML style of the list */
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: none;
     /* Fix the nav bar to the top of the page */
     position: fixed;
     top: 0;
-    width: 95%;
+    width: 98%;
     text-transform: uppercase;
+    font-family: roboto;
+    font-size: 18px;
   }
 
+  /* Align logo to the top left */
+  li:first-child {
+    float: left;
+  }
+
+  /* Make other tabs align top right*/
   li {
     float:right;
+    padding: 5px 5px;
   }
-
 
   a {
     display: block;
-    padding: 8px;
-    /* background-color: #dddddd; */
+    padding: 16px;
   }
 
   a:link{
@@ -44,23 +71,108 @@
     color:#e2251b;
   }
 
-  </style>
+  .parallax{
+    /* The image used */
+    background-image: url("bg-web-landing.jpg");
 
+    /* Set a specific height */
+    min-height: 800px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
+  #title_vivez{
+    font-size: 70px;
+    font-family:roboto-bold;
+    text-transform:uppercase;
+    text-align:center;
+    color:white;
+  }
+
+  #title_insa{
+    font-size: 55px;
+    font-family:roboto;
+    text-transform:uppercase;
+    text-align:center;
+    color:white;
+  }
+
+  #resume {
+    font-size: 20px;
+    font-family:roboto;
+    text-transform:uppercase;
+    text-align:center;
+    color:white;
+  }
+
+  #logo {
+    position:relative;
+  }
+
+  #logo img {
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  </style>
 </head>
 
 <body>
-    <ul>
 
-      <li> <a href="#">Contact </a> </li>
-      <li> <a href="#">Adhésion </a> </li>
-      <li> <a href="#">Événements</a> </li>
-      <li> <a href="#">Partenaires</a> </li>
-      <li> <a href="#">Clubs</a> </li>
-      <li> <a href="#">Bureau </a> </li>
-      <li> <a href="welcome.html">Accueil</a> </li>
+<div class="parallax"> </div>
 
-    </ul>
+<div class="parallax_text">
+<!-- Welcoming text, centered on the parallax image -->
+  <h3 id="title_vivez"> Vivez l'associatif </h3>
+  <p id="title_insa"> - à l'INSA Rennes - </p>
+  <p id="resume"> AVEC PRÈS DE 1000 ADHÉRENTS ET PLUS DE 40 CLUBS, <br>
+    L’AEIR EST UN ACTEUR MAJEUR DE LA VIE ASSOCIATIVE RENNAISE. </p>
+  </div>
 
+<!-- Navbar -->
+  <ul>
+<!-- The logo is the only tab to the top left of the page -->
+    <li> <div id="logo">
+      <a href="http://aeir.insa-rennes.fr">
+        <img src="AEIR_logoblanc01.svg" alt="Logo AEIR">
+      </a>
+    </div> </li>
+<!-- All other tabs are aligned to the top right -->
+    <li> <a href="#">Contact </a> </li>
+    <li> <a href="#">Adhésion </a> </li>
+    <li> <a href="#">Événements</a> </li>
+    <li> <a href="#">Partenaires</a> </li>
+    <li> <a href="#">Clubs</a> </li>
+    <li> <a href="#">Bureau </a> </li>
+    <li> <a href="welcome.html">Accueil</a> </li>
+    <!-- <li>  Amicale des élèves <br> de l'INSA Rennes </li> -->
+  </ul>
+
+<!-- Junk div to simulate parallax effect -->
+  <div style="height:1000px;background-color:black;font-size:36px">
+    Scroll Up and Down this page to see the parallax scrolling effect.
+    This div is just here to enable scrolling.
+    Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  </div>
 
 </body>
 </html>
