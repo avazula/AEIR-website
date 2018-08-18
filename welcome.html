@@ -11,56 +11,91 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js_stuff.js"></script>
-  <link rel="stylesheet" href="welcome.css" title="Main_site_stylesheet">
+  <link rel="stylesheet" href="landing.css" title="Main_site_stylesheet">
+  <!-- <link rel="stylesheet" href="welcome_parallax.css" title="Main_site_parallax_stylesheet"> -->
 
   <title>Amicale des Élèves de l'INSA Rennes</title>
 
   <!-- <style media="screen">
 
 
-  </style> -->
+</style> -->
 </head>
 
 <body>
 
-<div class="parallax"> </div>
+  <div class="parallax"> </div>
 
-<div class="parallax_text">
-<!-- Welcoming text, centered on the parallax image -->
-  <h3 id="title_vivez"> Vivez l'associatif </h3>
-  <p id="title_insa"> - à l'INSA Rennes - </p>
-  <p id="resume"> AVEC PRÈS DE 1000 ADHÉRENTS ET PLUS DE 40 CLUBS, <br>
-    L’AEIR EST UN ACTEUR MAJEUR DE LA VIE ASSOCIATIVE RENNAISE. </p>
+  <div class="parallax_text">
+    <!-- Welcoming text, centered on the parallax image -->
+    <h3 id="title_vivez"> Vivez l'associatif </h3>
+    <p id="title_insa"> - à l'INSA Rennes - </p>
+    <p id="resume"> AVEC PRÈS DE 1000 ADHÉRENTS ET PLUS DE 40 CLUBS, <br>
+      L’AEIR EST UN ACTEUR MAJEUR DE LA VIE ASSOCIATIVE RENNAISE. </p>
   </div>
 
-<!-- Navbar -->
+    <!-- Navbar -->
   <ul>
-<!-- The logo is the only tab to the top left of the page -->
+    <!-- The logo is the only tab to the top left of the page -->
     <li> <div id="logo">
-      <a href="http://aeir.insa-rennes.fr">
-        <img src="logo_test.png" alt="Logo AEIR">
-      </a>
+    <a href="http://aeir.insa-rennes.fr">
+      <img src="logo_test.png" alt="Logo AEIR">
+    </a>
     </div> </li>
-<!-- All other tabs are aligned to the top right -->
-    <li> <a href="#">Contact </a> </li>
-    <li> <a href="#">Adhésion </a> </li>
-    <li> <a href="#">Événements</a> </li>
-    <li> <a href="#">Partenaires</a> </li>
-    <li> <a href="#">Clubs</a> </li>
-    <li> <a href="#">Bureau </a> </li>
-    <li> <a href="welcome.html">Accueil</a> </li>
-    <!-- <li>  Amicale des élèves <br> de l'INSA Rennes </li> -->
+      <!-- All other tabs are aligned to the top right -->
+      <li> <a href="#">Contact </a> </li>
+      <li> <a href="#">Adhésion </a> </li>
+      <li> <a href="#">Événements</a> </li>
+      <li> <a href="#">Partenaires</a> </li>
+      <li> <a href="#">Clubs</a> </li>
+      <li> <a href="#">Bureau </a> </li>
+      <li> <a href="welcome.html">Accueil</a> </li>
+      <!-- <li>  Amicale des élèves <br> de l'INSA Rennes </li> -->
   </ul>
 
-<!-- Junk div to simulate parallax effect -->
-  <!-- <div style="height:1000px;background-color:black;font-size:36px">
-    Scroll Up and Down this page to see the parallax scrolling effect.
-    This div is just here to enable scrolling.
-    Tip: Try to remove the background-attachment property to remove the scrolling effect.
-  </div> -->
+  <div style="height:200px;background-color:white">  </div>
 
-<footer>
-  &copy; Copyright 2018 Marie Brunet Carteaux. All rights reserved.
-</footer>
-</body>
-</html>
+    <div style="height:1000px;background-color:white">
+
+      <div class="par_who">
+        <div class="caption">
+          <span class="border">Qui sommes nous ?</span>
+          <!-- <h1 id="who_are_we">Qui sommes nous ?</h1> -->
+        </div>
+      </div>
+
+      <div class="par_integration">
+        <div class="caption">
+          <span class="border">Intégration</span>
+          <!-- <h1 id="who_are_we">Qui sommes nous ?</h1> -->
+        </div>
+      </div>
+
+      <div class="par_join">
+        <div class="caption">
+          <span class="border">Adhérer !</span>
+          <!-- <h1 id="who_are_we">Qui sommes nous ?</h1> -->
+        </div>
+      </div>
+
+      <!-- <div class="par_who_text">
+        <h1 id="who_are_we">Qui sommes nous ?</h1>
+      </div>
+
+      <div class="par_integration"></div>
+      <div class="par_integration_text">
+        <h1 id="integration">Intégration</h1>
+      </div>
+
+      <div class="par_join"></div>
+      <div class="par_join_text">
+        <h1 id="join_us"> Adhérer !</h1>
+      </div> -->
+
+    </div> <!-- End of info page-->
+
+    <footer>
+      &copy; Copyright 2018 Marie Brunet Carteaux. All rights reserved.
+    </footer>
+  </body>
+  </html>
