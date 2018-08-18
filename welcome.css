@@ -60,7 +60,7 @@ a:hover{
   background-image: url("bg-web-landing.jpg");
 
   /* Set a specific height */
-  min-height: 1020px;
+  min-height: 100%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
