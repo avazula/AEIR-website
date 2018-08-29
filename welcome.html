@@ -11,19 +11,36 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js_stuff.js"></script>
+  <script src="change_on_scroll.js"></script>
   <link rel="stylesheet" href="welcome.css" title="Main_site_stylesheet">
 
   <title>Amicale des Élèves de l'INSA Rennes</title>
 
-  <!-- <style media="screen">
-
-
-  </style> -->
 </head>
-
 <body>
 
-<div class="parallax"> </div>
+  <!-- Navbar -->
+  <nav class="nav">
+    <ul>
+  <!-- The logo is the only tab to the top left of the page -->
+      <li> <div id="logo">
+        <a href="http://aeir.insa-rennes.fr">
+          <img src="logo_test.png" alt="Logo AEIR">
+        </a>
+      </div> </li>
+  <!-- All other tabs are aligned to the top right -->
+      <li> <a href="#">Contact </a> </li>
+      <li> <a href="#">Adhésion </a> </li>
+      <li> <a href="#">Événements</a> </li>
+      <li> <a href="#">Partenaires</a> </li>
+      <li> <a href="#">Clubs</a> </li>
+      <li> <a href="#">Bureau </a> </li>
+      <li> <a href="welcome.html">Accueil</a> </li>
+      <!-- <li>  Amicale des élèves <br> de l'INSA Rennes </li> -->
+    </ul>
+  </nav>
+
+<div class="parallax" id="main"> </div>
 
 <div class="parallax_text">
 <!-- Welcoming text, centered on the parallax image -->
@@ -33,31 +50,12 @@
     L’AEIR EST UN ACTEUR MAJEUR DE LA VIE ASSOCIATIVE RENNAISE. </p>
   </div>
 
-<!-- Navbar -->
-  <ul>
-<!-- The logo is the only tab to the top left of the page -->
-    <li> <div id="logo">
-      <a href="http://aeir.insa-rennes.fr">
-        <img src="logo_test.png" alt="Logo AEIR">
-      </a>
-    </div> </li>
-<!-- All other tabs are aligned to the top right -->
-    <li> <a href="#">Contact </a> </li>
-    <li> <a href="#">Adhésion </a> </li>
-    <li> <a href="#">Événements</a> </li>
-    <li> <a href="#">Partenaires</a> </li>
-    <li> <a href="#">Clubs</a> </li>
-    <li> <a href="#">Bureau </a> </li>
-    <li> <a href="welcome.html">Accueil</a> </li>
-    <!-- <li>  Amicale des élèves <br> de l'INSA Rennes </li> -->
-  </ul>
+<div id="below-main">
+
+</div>
 
 <!-- Junk div to simulate parallax effect -->
-  <!-- <div style="height:1000px;background-color:black;font-size:36px">
-    Scroll Up and Down this page to see the parallax scrolling effect.
-    This div is just here to enable scrolling.
-    Tip: Try to remove the background-attachment property to remove the scrolling effect.
-  </div> -->
+  <div class="spacer"> </div>
 
 <footer>
   &copy; Copyright 2018 Marie Brunet Carteaux. All rights reserved.

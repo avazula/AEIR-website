@@ -13,7 +13,7 @@ body, html {
   src: url(fonts/Roboto-Bold.ttf);
 }
 
-ul {
+nav ul {
   /* Remove the default HTML style of the list */
   list-style-type: none;
   margin: 0;
@@ -22,38 +22,48 @@ ul {
   /* Fix the nav bar to the top of the page */
   position: fixed;
   top: 0;
-  width: 98%;
+  width: 100%;
   text-transform: uppercase;
   font-family: roboto;
   font-size: 18px;
 }
 
 /* Align logo to the top left */
-li:first-child {
+nav li:first-child {
   float: left;
 }
 
 /* Make other tabs align top right*/
-li {
+nav li {
   float:right;
   padding: 5px 5px;
 }
 
-a {
+nav a {
   display: block;
   padding: 16px;
 }
 
-a:link{
+nav a:link{
   color:white;
   text-decoration:none;
 }
-a:visited {
+nav a:visited {
   color: white;
 }
-a:hover{
+nav a:hover{
   color:#e2251b;
 }
+
+/* .nav {
+  transition: all 0.25s ease;
+
+}
+
+.nav.past-main {
+  background-color: #e2251b;
+  color: white;
+} */
 
 .parallax{
   /* The image used */
@@ -125,4 +135,9 @@ footer {
   text-align: center;
   text-transform: uppercase;
   font-size: 11px;
+}
+
+.spacer{
+    height:2000px;
+    background-color: white;
 }
