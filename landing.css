@@ -1,6 +1,9 @@
 body, html {
   height: 100%;
-  background:black;
+  background:white;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+
 }
 /* Domou arigato Mister Roboto! */
 @font-face {
@@ -175,6 +178,20 @@ a:hover{
   padding: 18px;
   font-size: 25px;
   letter-spacing: 3px;
+}
+
+.infotext {
+  height:300px;
+  background-color:white;
+  text-align: justify;
+  padding: 50px;
+  margin:70px;
+}
+
+#rns, #uds {
+  all:unset;
+color:#e2251b;
+}
 }
 
 footer {
