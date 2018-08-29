@@ -1,0 +1,128 @@
+body, html {
+  height: 100%;
+  background:black;
+}
+/* Domou arigato Mister Roboto! */
+@font-face {
+  font-family: roboto;
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: roboto-bold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+ul {
+  /* Remove the default HTML style of the list */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  /* Fix the nav bar to the top of the page */
+  position: fixed;
+  top: 0;
+  width: 98%;
+  text-transform: uppercase;
+  font-family: roboto;
+  font-size: 18px;
+}
+
+/* Align logo to the top left */
+li:first-child {
+  float: left;
+}
+
+/* Make other tabs align top right*/
+li {
+  float:right;
+  padding: 5px 5px;
+}
+
+a {
+  display: block;
+  padding: 16px;
+}
+
+a:link{
+  color:white;
+  text-decoration:none;
+}
+a:visited {
+  color: white;
+}
+a:hover{
+  color:#e2251b;
+}
+
+.parallax{
+  /* The image used */
+  background-image: url("bg-web-landing.jpg");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+#title_vivez{
+  font-size: 70px;
+  font-family:roboto-bold;
+  text-transform:uppercase;
+  text-align:center;
+  color:white;
+}
+
+#title_insa{
+  font-size: 55px;
+  font-family:roboto;
+  text-transform:uppercase;
+  text-align:center;
+  color:white;
+}
+
+#resume {
+  font-size: 20px;
+  font-family:roboto;
+  text-transform:uppercase;
+  text-align:center;
+  color:white;
+}
+
+#logo {
+  position:relative;
+}
+
+#logo img {
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+footer {
+  font-family: roboto;
+  /* color: grey; */
+  background-color: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+}
