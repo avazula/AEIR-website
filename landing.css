@@ -194,6 +194,25 @@ color:#e2251b;
 }
 }
 
+.wei_tarif{grid-area: wei; }
+.weipa_tarif{grid-area: weipa; }
+
+.integration_list{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 70px;
+  padding: 10px;
+}
+
+.integration_list > div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 footer {
   font-family: roboto;
   /* color: grey; */
