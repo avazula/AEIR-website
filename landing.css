@@ -190,33 +190,53 @@ a:hover{
 
 #rns, #uds {
   all:unset;
-color:#e2251b;
-}
-}
-
-.wei_tarif{grid-area: wei; }
-.weipa_tarif{grid-area: weipa; }
-
-.integration_list{
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 70px;
-  padding: 10px;
+  color:#e2251b;
 }
 
-.integration_list > div {
-  display: flex;
-  justify-content: center;
+.link_container {
   text-align: center;
-  align-items: center;
-  padding: 20px 0;
-  font-size: 30px;
 }
+
+.link_style {
+  font-family: roboto-bold;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display:inline-block;
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: 0px;
+}
+
+.row {
+  font-family: roboto-bold;
+  text-transform: uppercase;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* .spacer {
+  height: 50px;
+} */
 
 footer {
   font-family: roboto;
-  /* color: grey; */
-  background-color: none;
+  color: #e2251b;
+  background-color: black;
   text-align: center;
   text-transform: uppercase;
   font-size: 11px;
