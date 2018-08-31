@@ -78,6 +78,10 @@ a:hover{
   transition: 0.3s;
 }
 
+.scrolled a:hover {
+  color: black;
+}
+
 .parallax{
   /* The image used */
   background-image: url("images/bg-web-landing.jpg");
