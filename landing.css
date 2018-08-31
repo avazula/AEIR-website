@@ -21,9 +21,8 @@ body, html {
   src: url(fonts/Roboto-Black.ttf);
 }
 
-ul {
+.navbar {
   /* Remove the default HTML style of the list */
-  list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: none;
@@ -34,6 +33,11 @@ ul {
   text-transform: uppercase;
   font-family: roboto;
   font-size: 18px;
+  transition: 0.3s;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* Align logo to the top left */
@@ -61,6 +65,17 @@ a:visited {
 }
 a:hover{
   color:#e2251b;
+}
+
+.navbar {
+  transition: 0.3s;
+}
+
+.scrolled{
+  background-color: #e2251b;
+  width: 100%;
+  z-index: 999;
+  transition: 0.3s;
 }
 
 .parallax{
