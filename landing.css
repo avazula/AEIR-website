@@ -221,6 +221,7 @@ a:hover{
   letter-spacing: 3px;
   text-transform: uppercase;
   display:inline-block;
+  cursor: pointer;
 }
 
 
@@ -230,6 +231,10 @@ a:hover{
     text-align: center;
     width: 50%;
     padding: 0px;
+}
+
+.column h3 {
+  color: #e2251b;
 }
 
 .row {
