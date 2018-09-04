@@ -3,7 +3,7 @@ $(function() {
 
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= 1000) {
+        if (scroll >= window.innerHeight) {
             header.addClass("scrolled");
         } else {
             header.removeClass("scrolled");
