@@ -41,12 +41,12 @@ ul {
 }
 
 /* Align logo to the top left */
-li:first-child {
+#navbar_item:first-child {
   float: left;
 }
 
 /* Make other tabs align top right*/
-li {
+#navbar_item {
   float:right;
   padding: 5px 5px;
 }
@@ -260,7 +260,7 @@ a:hover{
 
 }
 
-footer {
+#footer {
   font-family: roboto;
   color: #e2251b;
   background-color: black;
@@ -270,8 +270,13 @@ footer {
 }
 
 #copy {
+  float:center;
+
   font: 400 15px/1.8 "Lato", sans-serif;
   color: grey;
   text-transform: none;
   padding:10px;
+  list-style-type: none;
+  /* position: fixed; */
+  bottom: 0;
 }
